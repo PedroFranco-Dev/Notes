@@ -1,4 +1,3 @@
-/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +8,6 @@
 body {
     background-color: #042940;
 }
-
-/* Header */
 
 header {
     border-bottom: 1px solid #ccc;
@@ -58,8 +55,6 @@ header {
     color: #9FC131;
 }
 
-/* Add Notes */
-
 #add-note-container {
     display: flex;
     width: 400px;
@@ -99,8 +94,6 @@ header {
     color: #9FC131;
     background-color: #e6e6e6;
 }
-
-/* Notes */ 
 
 #notes-container {
     display: grid;
@@ -173,8 +166,6 @@ header {
 .note.fixed {
     background-color: #074063;
 }
-
-/* Response */
 
 @media(max-width: 450px) {
     header {

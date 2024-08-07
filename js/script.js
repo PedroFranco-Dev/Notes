@@ -1,12 +1,9 @@
-// Elements
 const notesContainer = document.querySelector("#notes-container");
 const noteInput = document.querySelector("#note-content");
 const addNoteBtn = document.querySelector(".add-note");
 const searchInput = document.querySelector("#search-input");
 const exportBtn = document.querySelector("#export-notes");
 
-
-// Functions
 function showNotes() {
     clearNotes();
 
@@ -81,10 +78,6 @@ function createNote(id, content, fixed) {
         element.classList.add("fixed")
     }
 
-
-
-    // Elements Events
-
     element.querySelector("textarea").addEventListener("keyup", (e) => {
 
         const noteContent = e.target.value
@@ -158,7 +151,6 @@ function updateNote(id, newContent) {
     saveNotes(notes);
 }
 
-// Local Storage
 function getNotes() {
     const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 
@@ -199,7 +191,7 @@ function exportData() {
     ].map((e) => e.join(",")).join("\n");
 
     const element = document.createElement("a");
-    
+
     element.href = "data:text/csv;charset=utf-8," + encodeURI(csvString);
 
     element.target = "_blank"
@@ -208,7 +200,6 @@ function exportData() {
 
     element.click();
 };
-// Events
 addNoteBtn.addEventListener("click", () => addNote())
 
 searchInput.addEventListener("keyup", (e) => {
@@ -229,7 +220,6 @@ exportBtn.addEventListener("click", () => {
     exportData();
 });
 
-// Iniciating 
 showNotes();
 
 
