@@ -19,6 +19,10 @@ function clearNotes() {
 }
 
 function addNote() {
+    
+    if (noteInput.value.trim() === "") {
+        return;
+    }
 
     const notes = getNotes();
 
