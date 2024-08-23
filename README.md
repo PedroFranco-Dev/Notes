@@ -1,6 +1,3 @@
-# Notes
-Notes make in Js
-
 # Notes - Web Application
 
 This is a web application project for managing notes, where you can create, edit, pin, duplicate, search, and export your notes in CSV format. The notes are stored locally in the browser using `localStorage`.
